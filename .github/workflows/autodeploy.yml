@@ -52,4 +52,3 @@ jobs:
             docker rm react || true
             docker rmi ${{ secrets.DOCKER_USER }}/react-test:mixed || true
             docker run -d -p 80:80 --name react ${{ secrets.DOCKER_USER }}/react-test:mixed
-
