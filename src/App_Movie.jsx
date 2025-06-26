@@ -6,7 +6,8 @@ function App() {
   const getMovies = async () => {
   // localhost:8080 은 나중에 ALB 생성 후 DNS 로 변경 예정
     // const response = await fetch("http://localhost:8080")
-    const response = await fetch("https://boot.kostabkpark.r-e.kr")
+    // const response = await fetch("https://boot.kostabkpark.r-e.kr")
+    const response = await fetch("http://kostabkpark.r-e.kr:8080")
     const json = await response.json();
     setMovies(json.movies);
     setIsLoading(false);
