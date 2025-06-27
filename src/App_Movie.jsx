@@ -7,7 +7,7 @@ function App() {
   // localhost:8080 은 나중에 ALB 생성 후 DNS 로 변경 예정
     // const response = await fetch("http://localhost:8080")
     // const response = await fetch("https://boot.kostabkpark.r-e.kr")
-    const response = await fetch("https://kostabkpark.r-e.kr/movies")
+ 
     const json = await response.json();
     setMovies(json.movies);
     setIsLoading(false);
@@ -22,7 +22,7 @@ function App() {
        <div>
         {movies.map( movie => <Movie key={movie.id}
                                      coverImage={movie.medium_cover_image}
-                                     title={movie.title}
+                                     title={movie.title}   const response = await fetch("https://kostabkpark.r-e.kr/movies")
                                      summary={movie.summary}
                                />
         )}
